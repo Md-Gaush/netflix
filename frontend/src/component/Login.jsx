@@ -33,7 +33,7 @@ const Login = () => {
     setIsLogin(!isLogin);
   };
 
-  const BASE_URL = "http://localhost:8080/api";
+  const BASE_URL = "https://netflix-kisz.onrender.com";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

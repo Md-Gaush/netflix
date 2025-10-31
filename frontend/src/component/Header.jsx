@@ -16,7 +16,7 @@ const dispatch = useDispatch()
 // logout
 const logoutHandler = async() =>{
    try {
-    const res = await axios.get("http://localhost:8080/api/logout")
+    const res = await axios.get("https://netflix-kisz.onrender.com/api/logout")
     if(res.data.success){
       toast.success(res.data.message)
     }
