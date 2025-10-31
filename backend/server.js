@@ -21,10 +21,11 @@ app.use(cookieParser())
 app.use("/api",route)
 
 
-app.use(express.static(path.join(_dirname,"/frontend/dist")))
-app.get(/.*/, (req, res) => {
-  res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"))
-})
+app.use(express.static(path.join(_dirname, "frontend", "dist")));
+
+app.all("*", (req, res) => {
+  res.sendFile(path.join(_dirname, "frontend", "dist", "index.html"));
+});
 
 app.listen(process.env.PORT,()=>{
     console.log(`serveris running on`.bgCyan.white , process.env.PORT)
