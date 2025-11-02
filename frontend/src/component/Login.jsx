@@ -41,7 +41,7 @@ const Login = () => {
     // login
     if (isLogin) {
       try {
-        const res = await axios.post(`${BASE_URL}/login`, inputData, {
+        const res = await axios.post(`${BASE_URL}/api/login`, inputData, {
           withCredentials: true,
         });
        
